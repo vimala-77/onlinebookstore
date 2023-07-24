@@ -24,7 +24,7 @@ class DatabaseConfig {
     public final static String DB_PORT = "3307";
     public final static String DB_NAME = "onlinebookstore";
     public final static String DB_USER_NAME = "root";
-    public final static String DB_PASSWORD = "root");
+    public final static String DB_PASSWORD = "root";
     public final static String CONNECTION_STRING = DB_HOST + ":" + DB_PORT + "/" + DB_NAME;
 
 }
