@@ -12,9 +12,9 @@ MAINTAINER  vimala
 RUN mkdir /opt/tomcat/
 
 WORKDIR /opt/tomcat
-RUN curl -O https://downloads.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
+RUN curl -O https://downloads.apache.org/tomcat/tomcat-9/v9.0.87/bin/apache-tomcat-9.0.87.tar.gz
 RUN tar xvfz apache*.tar.gz
-RUN mv apache-tomcat-9.0.70/* /opt/tomcat/.
+RUN mv apache-tomcat-9.0.87/* /opt/tomcat/.
 
 #WORKDIR /opt/apps/docker
 #COPY ./onlinebookstore.war /opt/tomcat/webapps
@@ -23,4 +23,4 @@ RUN curl -O -L https://github.com/vimala-77/master-project/blob/main/onlinebooks
 ENV db.driver=com.mysql.cj.jdbc.Driver db.host=jdbc:mysql://sql-container db.port=3307 db.name=onlinebookstore db.username=root db.password=root
 
 EXPOSE 8080
-CMD [“/opt/tomcat/bin/ vimala a.sh”, “run”]
+CMD [“/opt/tomcat/bin/catalina.sh”, “run”]
